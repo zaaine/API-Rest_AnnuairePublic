@@ -6,7 +6,14 @@ const contactSchema = new Schema({
   lastname: String,
   email: String,
   phone: String,
-  
+  company: { type: String },
+  jobTitle: { type: String },
+  address: {
+    street: { type: String },
+    city: { type: String },
+    zipCode: { type: String },
+    country: { type: String },
+  },
 });
 
 module.exports = mongoose.model("Contact", contactSchema);
