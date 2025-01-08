@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include("partials/head.ejs") %>
+    <title>Supprimer un Contact</title>
+  </head>
+  <body>
+    <!-- Inclure la navigation -->
+    <%- include("partials/nav.ejs") %>
+
+    <div class="container mt-3">
+      <main class="container-fluid d-flex flex-column min-vh-100">
+        <h2>
+          Êtes-vous sûr de vouloir supprimer le contact : <%= contact.firstname
+          %> <%= contact.lastname %> ?
+        </h2>
+
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="firstname"
+                value="<%= contact.firstname %>"
+                disabled
+              />
+              <label for="firstname">Prénom</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                value="<%= contact.lastname %>"
+                disabled
+              />
+              <label for="lastname">Nom</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                value="<%= contact.email %>"
+                disabled
+              />
+              <label for="email">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                value="<%= contact.phone %>"
+                disabled
+              />
+              <label for="phone">Téléphone</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire de confirmation de suppression -->
+        <form
+          action="/contacts/<%= contact._id %>?_method=DELETE"
+          method="POST"
+        >
+          <button type="submit" class="btn btn-danger">
+            Supprimer ce contact
+          </button>
+        </form>
+        <form action="/contacts" method="GET" class="ms-3">
+          <button type="submit" class="btn btn-secondary">Annuler</button>
+        </form>
+      </main>
+    </div>
+
+    <%- include("partials/script.ejs") %> <%- include("partials/footer.ejs") %>
+  </body>
+</html>

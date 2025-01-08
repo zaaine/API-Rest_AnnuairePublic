@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include("partials/head.ejs") %>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Formulaire de création contact -->
+    <%- include("partials/nav.ejs") %>
+
+    <div class="container mt-3">
+      <main class="container-fluid d-flex flex-column min-vh-100">
+        <h2>Créer un nouveau contact :</h2>
+        <br />
+        <form action="/contacts" method="POST">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  name="firstname"
+                  required
+                />
+                <label for="firstname">Prénom</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  name="lastname"
+                  required
+                />
+                <label for="lastname">Nom</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+                <label for="email">Email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                />
+                <label for="phone">Téléphone</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="company"
+                  name="company"
+                />
+                <label for="company">Entreprise</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="jobTitle"
+                  name="jobTitle"
+                />
+                <label for="jobTitle">Poste</label>
+              </div>
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  id="address"
+                  name="address"
+                  style="height: 100px"
+                ></textarea>
+                <label for="address">Adresse</label>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-3 d-flex justify-content-end">
+            <form action="/contacts" method="POST" class="flex-grow-1">
+              <button type="submit" class="btn btn-primary">
+                Créer le contact
+              </button>
+            </form>
+          </div>
+        </form>
+      </main>
+    </div>
+    <%- include("partials/script.ejs") %> <%- include("partials/footer.ejs") %>
+  </body>
+</html>

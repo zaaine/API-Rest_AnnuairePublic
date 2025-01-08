@@ -1,0 +1,53 @@
+<%- include("partials/head.ejs") %> <%- include("partials/nav.ejs") %>
+
+<div class="container mt-3">
+  <h2>Rechercher un contact</h2>
+
+  <form action="/contacts/search" method="get">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="firstname">Prénom</label>
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="lastname">Nom</label>
+        <input type="text" id="lastname" name="lastname" class="form-control" />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control" />
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Rechercher</button>
+  </form>
+
+  <!-- Affichage des résultats de la recherche -->
+  <% if (contacts && contacts.length > 0) { %>
+  <h3 class="mt-4">Résultats de la recherche</h3>
+  <ul class="list-group">
+    <% contacts.forEach(function(contact) { %>
+    <li class="list-group-item">
+      <h5><%= contact.firstname %> <%= contact.lastname %></h5>
+      <p>Email: <%= contact.email %></p>
+      <p>Téléphone: <%= contact.phone %></p>
+      <a href="/contacts/<%= contact._id %>/edit" class="btn btn-warning"
+        >Modifier</a
+      >
+      <a href="/contacts/<%= contact._id %>/delete" class="btn btn-danger"
+        >Supprimer</a
+      >
+    </li>
+    <% }); %>
+  </ul>
+  <% } else { %>
+  <p>Aucun contact trouvé pour cette recherche.</p>
+  <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>

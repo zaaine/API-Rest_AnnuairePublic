@@ -8,12 +8,7 @@ const contactSchema = new Schema({
   phone: String,
   company: { type: String },
   jobTitle: { type: String },
-  address: {
-    street: { type: String },
-    city: { type: String },
-    zipCode: { type: String },
-    country: { type: String },
-  },
+  address: { type: String },
 });
 
 module.exports = mongoose.model("Contact", contactSchema);
