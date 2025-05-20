@@ -1,11 +1,13 @@
 {
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "name": "api-rest_annuairepublic",
   "version": "1.0.0",
   "description": "création d'une API Rest afin de fournir des contacts de type carnet d'adresse.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "aziz zaaine",
   "license": "ISC",
   "dependencies": {

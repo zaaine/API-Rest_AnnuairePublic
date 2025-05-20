@@ -1,10 +1,8 @@
 # Annuaire Public
 
-
 https://github.com/user-attachments/assets/e568a202-7992-42c3-9933-69548ac66824
 
 ![localhost_3000_](https://github.com/user-attachments/assets/9adc5947-6304-4616-b5b8-a45f3d628c8a)
-
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) <!-- Update with your license -->
 
@@ -14,6 +12,7 @@ J'ai pensé cette application pour un usage public ou communautaire consultable 
 ---
 
 ## Table des matières
+
 - [Présentation](#présentation)
 - [Fonctionnalités](#fonctionnalités)
 - [Installation](#installation)
@@ -23,12 +22,15 @@ J'ai pensé cette application pour un usage public ou communautaire consultable 
 - [Licence](#licence)
 
 ---
+
 ## Présentation
 
 L'**Annuaire Public** est une application web que j'ai entièrement développée, du serveur aux vues, en passant par la gestion des routes. Ce projet m'a permis de mettre en pratique et de consolider mes compétences en développement **backend** et **frontend**.
 
 ### Compétences mobilisées
+
 - **Backend** :
+
   - Conception et mise en place d'un serveur avec **Node.js** et **Express.js**.
   - Création d'une **API RESTful** pour gérer les opérations CRUD (Création, Lecture, Mise à jour, Suppression) sur les contacts.
   - Utilisation de **Mongoose** pour modéliser les données et interagir avec une base de données **MongoDB**.
@@ -41,14 +43,15 @@ L'**Annuaire Public** est une application web que j'ai entièrement développée
   - Création de formulaires interactifs pour ajouter, modifier et supprimer des contacts.
 
 ### Évolutivité
+
 Ce projet est conçu pour être **évolutif**. Il peut être enrichi avec de nouvelles fonctionnalités, telles que :
+
 - Une authentification utilisateur pour sécuriser l'accès à l'annuaire.
 - Une pagination pour gérer un grand nombre de contacts.
 - Des fonctionnalités de recherche et de filtrage plus avancées.
 - Une intégration avec d'autres services ou API externes.
 
-L'**Annuaire Public** est une base solide pour construire des applications plus complexes tout en démontrant mes compétences en développement full-stack.
----
+## L'**Annuaire Public** est une base solide pour construire des applications plus complexes tout en démontrant mes compétences en développement full-stack.
 
 ## Fonctionnalités
 
@@ -57,7 +60,7 @@ L'**Annuaire Public** est une base solide pour construire des applications plus 
 - **Filtrage dynamique** : Affichage des entrées selon des critères spécifiques (nom,prénom, email).
 - **API RESTful** : Accès aux données via une API pour une intégration transparente.
 - **Interface utilisateur responsive** : Conçue avec Bootstrap pour une expérience utilisateur optimale sur tous les appareils.
-- **Les views serveur sont servit par EJS.
+- \*\*Les views serveur sont servit par EJS.
 
 ---
 
@@ -68,8 +71,14 @@ Suivez ces étapes pour installer et exécuter l'application localement :
 1. **Cloner le dépôt :**
    ```bash
    git clone [https://github.com/zaaine/annuaire-public.git](https://github.com/zaaine/API-Rest_AnnuairePublic.git)
+   ```
 
-___
+---
+
+2.**Lancer le Projet :**
+
+- **MongoDB** : ouvrir MongoDBCompass et créer une Nouvelle connection sur le port 27017 (par defaut), créer une collection nomée carnet-adresses avec le user Admin.
+- **NPM** : intallation des modules avec "npm install" puis lancer la commande "npx nodemon index.js".
 
   ## Technologies utilisées
 
@@ -83,7 +92,7 @@ ___
 - **HTTP Status Codes** : Bibliothèque pour utiliser des codes de statut HTTP de manière descriptive dans votre application.
 - **Nodemon** : Outil pour redémarrer automatiquement le serveur lors de modifications du code, utile pendant le développement.
 
-___
+---
 
 ![localhost_3000_createContact](https://github.com/user-attachments/assets/b596b113-b199-431b-858b-bb7853ac8661)
 ![localhost_3000_searchContact](https://github.com/user-attachments/assets/eb6a52bc-3175-4dfa-9478-271cac3e234f)
